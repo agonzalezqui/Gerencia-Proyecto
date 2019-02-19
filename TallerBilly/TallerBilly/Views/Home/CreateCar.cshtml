@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Crear un Vehiculo";
+}
+
+<h2>Crear un vehiculo</h2>
+
+@using (Html.BeginForm()){
+
+    @Html.Label("Placa Vehiculo") <br />
+    @Html.TextBox("Placa")  <br />
+    @Html.ValidationMessage("Placa")<br />
+
+    @Html.Label("Numero de VIN del Vehiculo") <br />
+    @Html.TextBox("VIN")  <br />
+    @Html.ValidationMessage("VIN")<br />
+
+    @Html.Label("Modelo") <br />
+    @Html.TextBox("Modelo")  <br />
+    @Html.ValidationMessage("Modelo")<br />
+
+    @Html.Label("Marca") <br />
+    @Html.TextBox("Marca")  <br />
+    @Html.ValidationMessage("Marca")<br />
+
+    @Html.Label("Año") <br />
+    @Html.DropDownList("Ano",Enumerable.Range(1975, DateTime.Now.Year - 1974).Select(i => new SelectListItem { Value = i.ToString(), Text = i.ToString() })) <br />
+    @Html.ValidationMessage("Ano")<br />
+
+    @Html.Label("Combustible") <br />
+    @Html.TextBox("Combustible")  <br />
+    @Html.ValidationMessage("Combustible")<br />
+
+    @Html.Label("Transmisión") <br />
+    @Html.TextBox("Transmision")  <br />
+    @Html.ValidationMessage("Transmision")<br />
+
+    <br />
+    <button type="submit">Agregar</button>
+}
