@@ -13,28 +13,5 @@ namespace TallerBilly.Controllers
         {
             return View();
         }
-
-
-        [HttpGet]
-        public ActionResult CreateCar()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult CreateCar(ModelCreateCar model)
-        {
-            if (ModelState.IsValid)
-            {
-                InsertCar(model.Placa, model.VIN, model.Modelo, model.Marca, model.Ano, model.Combustible, model.Transmision);
-
-            }
-            return View();
-        }
-
-        private void InsertCar(String Placa, String VIN, String Modelo, String Marca, String ano, String Combustible, String Transmision)
-        {
-            
-        }
     }
 }
