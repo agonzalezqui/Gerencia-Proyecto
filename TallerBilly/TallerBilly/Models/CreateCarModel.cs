@@ -17,6 +17,7 @@ namespace TallerBilly.Models
         [Required]
         public string Marca { get; set; }
         [Required]
+        [Display(Name = "Año")]
         public string Ano { get; set; }
         [Required]
         public string Combustible { get; set; }
