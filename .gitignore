@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/TallerBilly/TallerBilly/Views/CreateAppointment/CreateAppointment.cshtml
+/TallerBilly/TallerBilly/obj/Release/TallerBilly.csproj.CoreCompileInputs.cache
+/TallerBilly/TallerBilly/obj/Debug/Tsc.out
