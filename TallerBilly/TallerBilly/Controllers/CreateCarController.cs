@@ -9,6 +9,7 @@ namespace TallerBilly.Controllers
 {
     public class CreateCarController : Controller
     {
+        TallerBillyDB _db = new TallerBillyDB();
         // GET: CreateCar
         public ActionResult Index()
         {
@@ -44,7 +45,17 @@ namespace TallerBilly.Controllers
         private void InsertCar(String Placa, String VIN, String Modelo, String Marca,
             String ano, String Combustible, String Transmision)
         {
+            CreateCarModel car = new CreateCarModel();
+            car.Placa = Placa;
+            car.VIN = VIN;
+            car.Modelo = Modelo;
+            car.Marca = Marca;
+            car.Ano = ano;
+            car.Combustible = Combustible;
+            car.Transmision = Transmision;
 
+            _db.CreatedCars.Add(car);
+            _db.SaveChanges();
         }
     }
 
