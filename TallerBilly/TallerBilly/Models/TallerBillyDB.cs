@@ -9,5 +9,6 @@ namespace TallerBilly.Models
     public class TallerBillyDB : DbContext
     {
         public DbSet<CreateCarModel> CreatedCars { get; set; }
+        public DbSet<CreateUserModel> CreatedUsers { get; set; }
     }
 }

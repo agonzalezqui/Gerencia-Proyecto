@@ -9,6 +9,8 @@ namespace TallerBilly.Models
     public class CreateCarModel
     {
         public int Id { get; set; }
+        
+
         [Required]
         public string Placa { get; set; }
         [Required]
@@ -23,6 +25,10 @@ namespace TallerBilly.Models
         [Required]
         public string Combustible { get; set; }
         public string Transmision { get; set; }
+
+        public int CreateUserModelId { get; set; }
+        public ICollection<CreateUserModel> ApprovedClients { get; set; }
+
 
     }
 }
