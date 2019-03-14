@@ -280,3 +280,15 @@ C:\Users\allan.gonzalez\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\b
 C:\Users\allan.gonzalez\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\bin\EntityFramework.SqlServer.xml
 C:\Users\allan.gonzalez\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\obj\Debug\TallerBilly.Migrations.attempt.resources
 C:\Users\allan.gonzalez\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\obj\Debug\TallerBilly.csproj.GenerateResource.Cache
+C:\Users\allan.gonzalez\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\bin\Google.Protobuf.dll
+C:\Users\allan.gonzalez\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\bin\MySql.Data.dll
+C:\Users\allan.gonzalez\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\bin\Google.Protobuf.xml
+C:\Users\allan.gonzalez\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\bin\MySql.Data.xml
+C:\Users\allan.gonzalez\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\bin\MySql.Web.dll
+C:\Users\allan.gonzalez\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\bin\WebMatrix.Data.dll
+C:\Users\allan.gonzalez\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\bin\WebMatrix.WebData.dll
+C:\Users\allan.gonzalez\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\bin\MySql.Web.xml
+C:\Users\allan.gonzalez\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\bin\WebMatrix.Data.xml
+C:\Users\allan.gonzalez\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\bin\WebMatrix.WebData.xml
+C:\Users\allan.gonzalez\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\bin\MySql.Data.EntityFramework.dll
+C:\Users\allan.gonzalez\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\bin\MySql.Data.EntityFramework.xml

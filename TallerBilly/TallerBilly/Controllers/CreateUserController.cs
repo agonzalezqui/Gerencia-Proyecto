@@ -12,7 +12,7 @@ namespace TallerBilly.Controllers
 {
     public class CreateUserController : Controller
     {
-        private TallerBillyDB db = new TallerBillyDB();
+        private TallerBillyDB db = new  TallerBillyDB();
 
         // GET: CreateUser
         public ActionResult Index()
