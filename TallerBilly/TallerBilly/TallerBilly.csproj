@@ -151,6 +151,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CreateCarController.cs" />
+    <Compile Include="Controllers\CreateCarModelsController.cs" />
     <Compile Include="Controllers\CreateUserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -251,6 +252,11 @@
     <Content Include="Views\CreateUser\Details.cshtml" />
     <Content Include="Views\CreateUser\Edit.cshtml" />
     <Content Include="Views\CreateUser\Index.cshtml" />
+    <Content Include="Views\CreateCarModels\Create.cshtml" />
+    <Content Include="Views\CreateCarModels\Delete.cshtml" />
+    <Content Include="Views\CreateCarModels\Details.cshtml" />
+    <Content Include="Views\CreateCarModels\Edit.cshtml" />
+    <Content Include="Views\CreateCarModels\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

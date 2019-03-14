@@ -8,9 +8,7 @@ namespace TallerBilly.Models
 {
     public class CreateCarModel
     {
-        public int Id { get; set; }
-        
-
+        public int Id { get; set; }   
         [Required]
         public string Placa { get; set; }
         [Required]

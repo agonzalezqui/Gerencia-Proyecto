@@ -1,0 +1,83 @@
+﻿@model TallerBilly.Models.CreateCarModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CreateCarModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Placa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Placa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VIN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VIN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ano)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ano)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Combustible)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Combustible)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Transmision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Transmision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateUserModelId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateUserModelId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
