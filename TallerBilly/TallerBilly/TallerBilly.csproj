@@ -273,16 +273,16 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\CreateCar\CreateCar.cshtml" />
-    <Content Include="Views\CreateUser\Create.cshtml" />
-    <Content Include="Views\CreateUser\Delete.cshtml" />
-    <Content Include="Views\CreateUser\Details.cshtml" />
-    <Content Include="Views\CreateUser\Edit.cshtml" />
-    <Content Include="Views\CreateUser\Index.cshtml" />
     <Content Include="Views\CreateCarModels\Create.cshtml" />
     <Content Include="Views\CreateCarModels\Delete.cshtml" />
     <Content Include="Views\CreateCarModels\Details.cshtml" />
     <Content Include="Views\CreateCarModels\Edit.cshtml" />
     <Content Include="Views\CreateCarModels\Index.cshtml" />
+    <Content Include="Views\CreateUser\Create.cshtml" />
+    <Content Include="Views\CreateUser\Delete.cshtml" />
+    <Content Include="Views\CreateUser\Details.cshtml" />
+    <Content Include="Views\CreateUser\Edit.cshtml" />
+    <Content Include="Views\CreateUser\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

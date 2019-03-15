@@ -28,7 +28,7 @@ namespace TallerBilly.Models
         [Required]
         public string Direccion { get; set; }
 
-
+        public int CreateCarModelId { get; set; }
 
     }
 }
