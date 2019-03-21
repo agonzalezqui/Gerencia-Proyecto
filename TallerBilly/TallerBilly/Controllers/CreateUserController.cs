@@ -17,7 +17,7 @@ namespace TallerBilly.Controllers
         // GET: CreateUser
         public ActionResult Index()
         {
-            return View(db.CreatedUsers.ToList());
+            return View(db.Users.ToList());
         }
 
         // GET: CreateUser/Details/5
@@ -27,7 +27,7 @@ namespace TallerBilly.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CreateUserModel createUserModel = db.CreatedUsers.Find(id);
+            CreateUserModel createUserModel = db.Users.Find(id);
             if (createUserModel == null)
             {
                 return HttpNotFound();
@@ -50,7 +50,7 @@ namespace TallerBilly.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.CreatedUsers.Add(createUserModel);
+                db.Users.Add(createUserModel);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +65,7 @@ namespace TallerBilly.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CreateUserModel createUserModel = db.CreatedUsers.Find(id);
+            CreateUserModel createUserModel = db.Users.Find(id);
             if (createUserModel == null)
             {
                 return HttpNotFound();
@@ -96,7 +96,7 @@ namespace TallerBilly.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CreateUserModel createUserModel = db.CreatedUsers.Find(id);
+            CreateUserModel createUserModel = db.Users.Find(id);
             if (createUserModel == null)
             {
                 return HttpNotFound();
@@ -109,8 +109,8 @@ namespace TallerBilly.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            CreateUserModel createUserModel = db.CreatedUsers.Find(id);
-            db.CreatedUsers.Remove(createUserModel);
+            CreateUserModel createUserModel = db.Users.Find(id);
+            db.Users.Remove(createUserModel);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

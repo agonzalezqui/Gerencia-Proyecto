@@ -304,3 +304,4 @@ C:\Users\user\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\bin\MySql.D
 C:\Users\user\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\bin\MySql.Web.xml
 C:\Users\user\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\bin\WebMatrix.Data.xml
 C:\Users\user\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\bin\WebMatrix.WebData.xml
+C:\Users\allan.gonzalez\Source\Repos\Gerencia-Proyecto\TallerBilly\TallerBilly\obj\Debug\TallerBilly.csprojResolveAssemblyReference.cache

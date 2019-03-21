@@ -8,7 +8,7 @@ namespace TallerBilly.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.CreateCarModels",
+                "dbo.Cars",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -24,7 +24,7 @@ namespace TallerBilly.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.CreateUserModels",
+                "dbo.Users",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),

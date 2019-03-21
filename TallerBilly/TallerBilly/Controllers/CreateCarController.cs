@@ -35,6 +35,8 @@ namespace TallerBilly.Controllers
         {
             if (ModelState.IsValid)
             {
+                List<CreateUserModel> lista = _db.Users.ToList();
+                ViewBag.lista = lista;
                 InsertCar(model.Placa, model.VIN, model.Modelo, model.Marca,
                     model.Ano, model.Combustible, model.Transmision);
 
@@ -54,7 +56,7 @@ namespace TallerBilly.Controllers
             car.Combustible = Combustible;
             car.Transmision = Transmision;
 
-            _db.CreatedCars.Add(car);
+            _db.Cars.Add(car);
             _db.SaveChanges();
         }
     }

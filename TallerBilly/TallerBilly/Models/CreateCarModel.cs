@@ -1,12 +1,15 @@
-﻿using System;
+﻿using TallerBilly.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Data.Linq;
+using System.Data.Linq.Mapping;
 
 namespace TallerBilly.Models
 {
-    public class CreateCarModel
+    public partial class CreateCarModel
     {
         public int Id { get; set; }   
         [Required]
@@ -24,9 +27,6 @@ namespace TallerBilly.Models
         public string Combustible { get; set; }
         public string Transmision { get; set; }
 
-        public int CreateUserModelId { get; set; }
-        public ICollection<CreateUserModel> ApprovedClients { get; set; }
-
-
+        public virtual ICollection<CreateUserModel> ApprovedClients { get; set; }
     }
 }

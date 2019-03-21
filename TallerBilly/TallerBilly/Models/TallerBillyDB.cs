@@ -2,6 +2,8 @@ using TallerBilly.Models;
 using System;
 using System.Data.Entity;
 using System.Linq;
+using System.Data.Linq;
+using System.Data.Linq.Mapping;
 
 
 namespace TallerBilly.Models
@@ -9,8 +11,8 @@ namespace TallerBilly.Models
 
     public class TallerBillyDB : DbContext
     {
-        public DbSet<CreateCarModel> CreatedCars { get; set; }
-        public DbSet<CreateUserModel> CreatedUsers { get; set; }
+        public DbSet<CreateCarModel> Cars { get; set; }
+        public DbSet<CreateUserModel> Users { get; set; }
         // Your context has been configured to use a 'TallerBilly' connection string from your application's 
         // configuration file (App.config or Web.config). By default, this connection string targets the 
         // 'TallerBilly.TallerBilly' database on your LocalDb instance. 

@@ -12,12 +12,12 @@ namespace TallerBilly.Controllers
 {
     public class CreateCarModelsController : Controller
     {
-        private TallerBillyDB db = new TallerBillyDB();
+        public TallerBillyDB db = new TallerBillyDB();
 
         // GET: CreateCarModels
         public ActionResult Index()
         {
-            return View(db.CreatedCars.ToList());
+            return View(db.Cars.ToList());
         }
 
         // GET: CreateCarModels/Details/5
@@ -27,7 +27,7 @@ namespace TallerBilly.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CreateCarModel createCarModel = db.CreatedCars.Find(id);
+            CreateCarModel createCarModel = db.Cars.Find(id);
             if (createCarModel == null)
             {
                 return HttpNotFound();
@@ -35,22 +35,33 @@ namespace TallerBilly.Controllers
             return View(createCarModel);
         }
 
+        //public ActionResult getUsers()
+        //{
+        //    //return Json(db.Users.Select(x => new
+        //    //{
+        //    //    ID = x.Id,
+        //    //}).ToList(), JsonRequestBehavior.AllowGet);
+        //    return View();
+        //}
+
         // GET: CreateCarModels/Create
         public ActionResult Create()
         {
+            ViewBag.users = db.Users.ToList();
             return View();
         }
 
         // POST: CreateCarModels/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Placa,VIN,Modelo,Marca,Ano,Combustible,Transmision,CreateUserModelId")] CreateCarModel createCarModel)
         {
             if (ModelState.IsValid)
             {
-                db.CreatedCars.Add(createCarModel);
+                db.Cars.Add(createCarModel);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +76,7 @@ namespace TallerBilly.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CreateCarModel createCarModel = db.CreatedCars.Find(id);
+            CreateCarModel createCarModel = db.Cars.Find(id);
             if (createCarModel == null)
             {
                 return HttpNotFound();
@@ -96,7 +107,7 @@ namespace TallerBilly.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CreateCarModel createCarModel = db.CreatedCars.Find(id);
+            CreateCarModel createCarModel = db.Cars.Find(id);
             if (createCarModel == null)
             {
                 return HttpNotFound();
@@ -109,8 +120,8 @@ namespace TallerBilly.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            CreateCarModel createCarModel = db.CreatedCars.Find(id);
-            db.CreatedCars.Remove(createCarModel);
+            CreateCarModel createCarModel = db.Cars.Find(id);
+            db.Cars.Remove(createCarModel);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
