@@ -27,6 +27,6 @@ namespace TallerBilly.Models
         public string Combustible { get; set; }
         public string Transmision { get; set; }
 
-        public virtual ICollection<CreateUserModel> ApprovedClients { get; set; }
+       
     }
 }

@@ -31,7 +31,6 @@ namespace TallerBilly.Models
         [Required]
         public string Direccion { get; set; }
 
-        public virtual ICollection<CreateCarModel> Cars { get; set; }
 
     }
 }

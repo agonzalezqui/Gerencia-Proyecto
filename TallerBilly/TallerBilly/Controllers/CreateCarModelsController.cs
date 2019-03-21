@@ -48,6 +48,7 @@ namespace TallerBilly.Controllers
         public ActionResult Create()
         {
             ViewBag.users = db.Users.ToList();
+
             return View();
         }
 
@@ -57,7 +58,7 @@ namespace TallerBilly.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Placa,VIN,Modelo,Marca,Ano,Combustible,Transmision,CreateUserModelId")] CreateCarModel createCarModel)
+        public ActionResult Create([Bind(Include = "Id,Placa,VIN,Modelo,Marca,Ano,Combustible,Transmision")] CreateCarModel createCarModel)
         {
             if (ModelState.IsValid)
             {
@@ -89,7 +90,7 @@ namespace TallerBilly.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Placa,VIN,Modelo,Marca,Ano,Combustible,Transmision,CreateUserModelId")] CreateCarModel createCarModel)
+        public ActionResult Edit([Bind(Include = "Id,Placa,VIN,Modelo,Marca,Ano,Combustible,Transmision")] CreateCarModel createCarModel)
         {
             if (ModelState.IsValid)
             {
