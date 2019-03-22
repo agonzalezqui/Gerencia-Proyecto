@@ -1,103 +1,99 @@
 ﻿@model TallerBilly.Models.CreateCarModel
 
 @{
-    ViewBag.Title = "Crear Vehiculo";
+    //ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    <hr />
-    <div class="row title-content">
-        <h2>Crear Vehiculo</h2>
-    </div>
-    <hr />
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-horizontal">
 
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Placa, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Placa, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Placa, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.VIN, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.VIN, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.VIN, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Modelo, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Modelo, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Modelo, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Marca, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Marca, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Marca, "", new { @class = "text-danger" })
-                    </div>
-                </div>
+    <div class="form-horizontal">
+        <h2>Agregar Vehiculo</h2>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Placa, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Placa, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Placa, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="col-md-6">
-            <div class="form-group">
-                @Html.LabelFor(model => model.Ano, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.DropDownList("Ano", Enumerable.Range(1975, DateTime.Now.Year - 1974).Select(i => new SelectListItem { Value = i.ToString(), Text = i.ToString() }), new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Ano, "", new { @class = "text-danger" })
-                </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.VIN, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VIN, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.VIN, "", new { @class = "text-danger" })
             </div>
-            <form method= "post">
-            </form>
-            <form id="myForm">
-                <label for="UsuariosDropdown"><b>Cliente</b></label>
-                <select class="form-control" id="UsuariosDropdown" name="UsuariosDropdown">
-                    @foreach(var user in ViewBag.users)
-                    {
-                        <option value="@user.Id">@user.Nombre</option>
-                    }
-                </select>
-            </form>
-            <div class="form-group">
-                @Html.LabelFor(model => model.Combustible, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Combustible, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Combustible, "", new { @class = "text-danger" })
-                </div>
-            </div>
+        </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.Transmision, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Transmision, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Transmision, "", new { @class = "text-danger" })
-                </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Marca, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Marca, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Marca, "", new { @class = "text-danger" })
             </div>
+        </div>
 
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Agregar" />
-                </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Modelo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Modelo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Modelo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Ano, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Ano", Enumerable.Range(1975, DateTime.Now.Year - 1974).Select(i => new SelectListItem { Value = i.ToString(), Text = i.ToString() }), new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Ano, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Combustible, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+
+                @Html.DropDownListFor(model => model.Transmision, (SelectList)ViewBag.Combustible, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Combustible, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Transmision, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Transmision, (IEnumerable<SelectListItem>)ViewBag.Transmision, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Transmision, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+                <form id="myForm">
+                    <label class="control-label col-md-2" for="Cliente">Cliente</label>
+                    <div class="col-md-10">
+                        <select class="form-control" id="UsuariosDropdown" name="UsuariosDropdown">
+                            @foreach (var user in ViewBag.users)
+                            {
+                                <option value="@user.Id">@user.Cedula - @user.Nombre @user.Apellido</option>
+                            }
+                        </select>
+                    </div>
+                </form>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Agregar" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Ir a Inicio", "Index", "Home")
+    @Html.ActionLink("Volver a la lista de vehiculos", "Index")
 </div>
 
 @section Scripts {
@@ -105,19 +101,19 @@
     @Scripts.Render("~/Scripts/jquery-3.0.0.js")
 }
 
-<script>
-    $(document).ready(function () {
-        $.ajax({
-            type: "GET",
-            url: "~/Controllers/CreateCarModelsController/getUsers",
-            data: "{}",
-            success: function (data) {
-                var s = '<option value="-1">Please Select a Department</option>';
-                for (var i = 0; i < data.length; i++) {
-                    s += '<option value="' + data[i].ID + '"</option>';
+@*<script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "~/Controllers/CreateCarModelsController/getUsers",
+                data: "{}",
+                success: function (data) {
+                    var s = '<option value="-1">Please Select a Department</option>';
+                    for (var i = 0; i < data.length; i++) {
+                        s += '<option value="' + data[i].ID + '"</option>';
+                    }
+                    $("#departmentsDropdown").html(s);
                 }
-                $("#departmentsDropdown").html(s);
-            }
+            });
         });
-    });
-</script>   
+    </script>*@   

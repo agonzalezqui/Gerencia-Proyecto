@@ -11,6 +11,7 @@ namespace TallerBilly.Models
 {
     public partial class CreateCarModel
     {
+        [Display(Name = "Cliente")]
         public int Id { get; set; }   
         [Required]
         public string Placa { get; set; }

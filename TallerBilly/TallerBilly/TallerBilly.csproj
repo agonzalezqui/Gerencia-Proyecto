@@ -186,7 +186,7 @@
       <DependentUpon>201903132342314_attempt.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\CarstoUser.cs" />
+    <Compile Include="Models\CarstoUserModel.cs" />
     <Compile Include="Models\CreateCarModel.cs" />
     <Compile Include="Models\CreateUserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
