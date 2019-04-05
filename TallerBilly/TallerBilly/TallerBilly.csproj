@@ -199,12 +199,16 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\typeahead.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Imalo.jpg" />
+    <Content Include="Images\wp3109781.jpg" />
+    <Content Include="Scripts\bloodhound.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -246,6 +250,9 @@
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\typeahead.bundle.js" />
+    <Content Include="Scripts\typeahead.bundle.min.js" />
+    <Content Include="Scripts\typeahead.jquery.js" />
     <Content Include="Scripts\umd\popper-utils.js" />
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
