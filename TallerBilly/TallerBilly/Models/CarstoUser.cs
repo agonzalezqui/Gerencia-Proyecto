@@ -9,7 +9,7 @@ using System.Data.Linq.Mapping;
 
 namespace TallerBilly.Models
 {
-    public class CarstoUserModel
+    public class CarstoUser
     {
         public int ID { get; set; }
 

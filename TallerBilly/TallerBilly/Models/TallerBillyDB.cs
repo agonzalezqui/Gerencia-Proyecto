@@ -13,7 +13,7 @@ namespace TallerBilly.Models
     {
         public DbSet<CreateCarModel> Cars { get; set; }
         public DbSet<CreateUserModel> Users { get; set; }
-        public DbSet<CarstoUserModel> CarstoUsers { get; set; }
+        public DbSet<CarstoUser> CarstoUsers { get; set; }
         // Your context has been configured to use a 'TallerBilly' connection string from your application's 
         // configuration file (App.config or Web.config). By default, this connection string targets the 
         // 'TallerBilly.TallerBilly' database on your LocalDb instance. 

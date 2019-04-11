@@ -49,22 +49,6 @@ namespace TallerBilly.Controllers
         {
             ViewBag.users = db.Users.ToList();
 
-            List<SelectListItem> lst = new List<SelectListItem>();
-
-            lst.Add(new SelectListItem() { Text = "Manual" });
-            lst.Add(new SelectListItem() { Text = "Automatico" });
-
-            ViewBag.Transmision = lst;
-
-            List<SelectListItem> lst1 = new List<SelectListItem>();
-
-            lst1.Add(new SelectListItem() { Text = "Gasolina" });
-            lst1.Add(new SelectListItem() { Text = "Diesel" });
-            lst1.Add(new SelectListItem() { Text = "Electrico" });
-            lst1.Add(new SelectListItem() { Text = "Híbrido" });
-
-            ViewBag.Combustible = lst1;
-
             return View();
         }
 
@@ -82,8 +66,6 @@ namespace TallerBilly.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-
 
             return View(createCarModel);
         }
