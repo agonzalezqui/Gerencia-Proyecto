@@ -1,7 +1,6 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: darkred;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -17,50 +16,13 @@
     white-space: normal;
 }
 
+title-content{
+   justify-content: center;
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
     max-width: 280px;
 }
-
-/*.background-create-car {
-    background-image: url(../Images/wp3109781.jpg);
-    width: auto;
-    height: auto;
-    padding-bottom: 50px;
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-    justify-content: center;
-}*/
-
-.backgroud-user-management {
-    background-image: url(../Images/Imalo.jpg);
-    width: auto;
-    height: auto;
-    padding-bottom: 50px;
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-    justify-content: center;
-}
-
-.title-font {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: x-large;
-    text-align: center;
-}
-
-.form-row {
-    margin-bottom: 15px;
-    align-items: center;
-}
-
-
-
-
-
-
