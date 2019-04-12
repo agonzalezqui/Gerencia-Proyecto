@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TallerBillyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="carstouser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Car_Id" Type="Int32" />
+    <Property Name="User_Id" Type="Int32" />
+    <NavigationProperty Name="createcarmodel" Relationship="Self.CarstoUser_Car" FromRole="carstousers" ToRole="createcarmodels" />
+    <NavigationProperty Name="createusermodel" Relationship="Self.CarstoUser_User" FromRole="carstousers" ToRole="createusermodels" />
+  </EntityType>
+  <EntityType Name="createcarmodel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Placa" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VIN" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Modelo" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Marca" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ano" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Combustible" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Transmision" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="carstousers" Relationship="Self.CarstoUser_Car" FromRole="createcarmodels" ToRole="carstousers" />
+  </EntityType>
+  <EntityType Name="createusermodel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Apellido" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Cedula" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Contacto" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Direccion" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="carstousers" Relationship="Self.CarstoUser_User" FromRole="createusermodels" ToRole="carstousers" />
+  </EntityType>
+  <Association Name="CarstoUser_Car">
+    <End Role="createcarmodels" Type="Self.createcarmodel" Multiplicity="0..1" />
+    <End Role="carstousers" Type="Self.carstouser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="createcarmodels">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="carstousers">
+        <PropertyRef Name="Car_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CarstoUser_User">
+    <End Role="createusermodels" Type="Self.createusermodel" Multiplicity="0..1" />
+    <End Role="carstousers" Type="Self.carstouser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="createusermodels">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="carstousers">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TallerBillyEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="carstousers" EntityType="Self.carstouser" />
+    <EntitySet Name="createcarmodels" EntityType="Self.createcarmodel" />
+    <EntitySet Name="createusermodels" EntityType="Self.createusermodel" />
+    <AssociationSet Name="CarstoUser_Car" Association="Self.CarstoUser_Car">
+      <End Role="createcarmodels" EntitySet="createcarmodels" />
+      <End Role="carstousers" EntitySet="carstousers" />
+    </AssociationSet>
+    <AssociationSet Name="CarstoUser_User" Association="Self.CarstoUser_User">
+      <End Role="createusermodels" EntitySet="createusermodels" />
+      <End Role="carstousers" EntitySet="carstousers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

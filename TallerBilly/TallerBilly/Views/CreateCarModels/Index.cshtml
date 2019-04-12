@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TallerBilly.Models.CreateCarModel>
+﻿@model IEnumerable<TallerBilly.Models.createcarmodel>
 
 @{
     ViewBag.Title = "Index";
@@ -33,9 +33,6 @@
         <th>
             @Html.DisplayNameFor(model => model.Transmision)
         </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.CreateUserModelId)
-        </th>*@
         <th></th>
     </tr>
 
@@ -62,9 +59,6 @@
         <td>
             @Html.DisplayFor(modelItem => item.Transmision)
         </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.CreateUserModelId)
-        </td>*@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TallerBillyModelStoreContainer" CdmEntityContainer="TallerBillyEntities1">
+    <EntitySetMapping Name="carstousers">
+      <EntityTypeMapping TypeName="TallerBillyModel.carstouser">
+        <MappingFragment StoreEntitySet="carstousers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Car_Id" ColumnName="Car_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="createcarmodels">
+      <EntityTypeMapping TypeName="TallerBillyModel.createcarmodel">
+        <MappingFragment StoreEntitySet="createcarmodels">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="VIN" ColumnName="VIN" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Combustible" ColumnName="Combustible" />
+          <ScalarProperty Name="Transmision" ColumnName="Transmision" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="createusermodels">
+      <EntityTypeMapping TypeName="TallerBillyModel.createusermodel">
+        <MappingFragment StoreEntitySet="createusermodels">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Contacto" ColumnName="Contacto" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
