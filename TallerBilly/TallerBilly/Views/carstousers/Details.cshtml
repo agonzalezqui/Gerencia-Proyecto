@@ -1,0 +1,35 @@
+﻿@model TallerBilly.Models.carstouser
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>carstouser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.createcarmodel.Placa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.createcarmodel.Placa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.createusermodel.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.createusermodel.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

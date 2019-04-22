@@ -175,6 +175,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\carstousersController.cs" />
     <Compile Include="Controllers\createcarmodelsController.cs" />
     <Compile Include="Controllers\createusermodelsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -322,6 +323,11 @@
     <Content Include="Views\createcarmodels\Details.cshtml" />
     <Content Include="Views\createcarmodels\Edit.cshtml" />
     <Content Include="Views\createcarmodels\Index.cshtml" />
+    <Content Include="Views\carstousers\Create.cshtml" />
+    <Content Include="Views\carstousers\Delete.cshtml" />
+    <Content Include="Views\carstousers\Details.cshtml" />
+    <Content Include="Views\carstousers\Edit.cshtml" />
+    <Content Include="Views\carstousers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

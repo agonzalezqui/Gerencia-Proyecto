@@ -10,108 +10,121 @@ using TallerBilly.Models;
 
 namespace TallerBilly.Controllers
 {
-    public class createcarmodelsController : Controller
+    public class carstousersController : Controller
     {
         private TallerBillyEntities1 db = new TallerBillyEntities1();
 
-        // GET: createcarmodels
+        // GET: carstousers
         public ActionResult Index()
         {
-            return View(db.createcarmodels.ToList());
+            var carstousers = db.carstousers.Include(c => c.createcarmodel).Include(c => c.createusermodel);
+            return View(carstousers.ToList());
         }
 
-        // GET: createcarmodels/Details/5
+        // GET: carstousers/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            createcarmodel createcarmodel = db.createcarmodels.Find(id);
-            if (createcarmodel == null)
+            carstouser carstouser = db.carstousers.Find(id);
+            if (carstouser == null)
             {
                 return HttpNotFound();
             }
-            return View(createcarmodel);
+            return View(carstouser);
         }
 
-        // GET: createcarmodels/Create
+        // GET: carstousers/Create
         public ActionResult Create()
         {
+            ViewBag.Car_Id = new SelectList(db.createcarmodels, "Id", "Placa");
+
+            ViewBag.cars = db.createusermodels.ToList();
+
+            ViewBag.User_Id = new SelectList(db.createusermodels, "Id", "Nombre");
+
             ViewBag.users = db.createusermodels.ToList();
             return View();
         }
 
-        // POST: createcarmodels/Create
+        // POST: carstousers/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Placa,VIN,Modelo,Marca,Ano,Combustible,Transmision")] createcarmodel createcarmodel)
+        public ActionResult Create([Bind(Include = "ID,Car_Id,User_Id")] carstouser carstouser)
         {
             if (ModelState.IsValid)
             {
-                db.createcarmodels.Add(createcarmodel);
+                db.carstousers.Add(carstouser);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(createcarmodel);
+            ViewBag.Car_Id = new SelectList(db.createcarmodels, "Id", "Placa", carstouser.Car_Id);
+            ViewBag.User_Id = new SelectList(db.createusermodels, "Id", "Nombre", carstouser.User_Id);
+            return View(carstouser);
         }
 
-        // GET: createcarmodels/Edit/5
+        // GET: carstousers/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            createcarmodel createcarmodel = db.createcarmodels.Find(id);
-            if (createcarmodel == null)
+            carstouser carstouser = db.carstousers.Find(id);
+            if (carstouser == null)
             {
                 return HttpNotFound();
             }
-            return View(createcarmodel);
+            ViewBag.Car_Id = new SelectList(db.createcarmodels, "Id", "Placa", carstouser.Car_Id);
+            ViewBag.User_Id = new SelectList(db.createusermodels, "Id", "Nombre", carstouser.User_Id);
+            return View(carstouser);
         }
 
-        // POST: createcarmodels/Edit/5
+        // POST: carstousers/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Placa,VIN,Modelo,Marca,Ano,Combustible,Transmision")] createcarmodel createcarmodel)
+        public ActionResult Edit([Bind(Include = "ID,Car_Id,User_Id")] carstouser carstouser)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(createcarmodel).State = EntityState.Modified;
+                db.Entry(carstouser).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(createcarmodel);
+            ViewBag.Car_Id = new SelectList(db.createcarmodels, "Id", "Placa", carstouser.Car_Id);
+            ViewBag.User_Id = new SelectList(db.createusermodels, "Id", "Nombre", carstouser.User_Id);
+            return View(carstouser);
         }
 
-        // GET: createcarmodels/Delete/5
+        // GET: carstousers/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            createcarmodel createcarmodel = db.createcarmodels.Find(id);
-            if (createcarmodel == null)
+            carstouser carstouser = db.carstousers.Find(id);
+            if (carstouser == null)
             {
                 return HttpNotFound();
             }
-            return View(createcarmodel);
+            return View(carstouser);
         }
 
-        // POST: createcarmodels/Delete/5
+        // POST: carstousers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            createcarmodel createcarmodel = db.createcarmodels.Find(id);
-            db.createcarmodels.Remove(createcarmodel);
+            carstouser carstouser = db.carstousers.Find(id);
+            db.carstousers.Remove(carstouser);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
