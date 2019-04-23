@@ -28,5 +28,6 @@ namespace TallerBilly.Models
         public virtual DbSet<carstouser> carstousers { get; set; }
         public virtual DbSet<createcarmodel> createcarmodels { get; set; }
         public virtual DbSet<createusermodel> createusermodels { get; set; }
+        public virtual DbSet<appointment> appointments { get; set; }
     }
 }

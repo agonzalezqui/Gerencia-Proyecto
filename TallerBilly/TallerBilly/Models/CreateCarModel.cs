@@ -9,9 +9,15 @@
 
 namespace TallerBilly.Models
 {
+    using TallerBilly.Models;
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.Linq;
+    using System.Web;
+    using System.Data.Linq;
+    using System.Data.Linq.Mapping;
+
     public partial class createcarmodel
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -25,6 +31,7 @@ namespace TallerBilly.Models
         public string VIN { get; set; }
         public string Modelo { get; set; }
         public string Marca { get; set; }
+        [Display(Name = "Año")]
         public string Ano { get; set; }
         public string Combustible { get; set; }
         public string Transmision { get; set; }

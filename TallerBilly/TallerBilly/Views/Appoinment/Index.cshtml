@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Appoinment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Calendario de Citas</h2>
+<hr />
+
+<div class="scheduler_container">
+    @Html.Raw(Model.Render())
+</div>
